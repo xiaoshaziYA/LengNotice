@@ -1,0 +1,8 @@
+broadcast-enabled: true
+broadcast-interval: 60
+broadcast-messages:
+  1: "欢迎来到服务器！"
+  2: "请遵守服务器规则！"
+  3: "祝您游戏愉快！"
+actionbar-enabled: true
+actionbar-message: "玩家 {playername} 光顾了xxx快餐店！"

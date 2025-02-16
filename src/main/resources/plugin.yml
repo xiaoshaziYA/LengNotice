@@ -1,0 +1,25 @@
+name: LengNotice
+version: 1.0
+main: org.leng.LengNotice
+commands:
+  ln:
+    description: 管理广播和动作栏消息
+    usage: /<command> [reload|on|off|list|actionbar|add|remove]
+    permission: lengnotice.use
+permissions:
+  lengnotice.use:
+    default: op
+  lengnotice.reload:
+    default: op
+  lengnotice.broadcast.on:
+    default: op
+  lengnotice.broadcast.off:
+    default: op
+  lengnotice.broadcast.list:
+    default: op
+  lengnotice.actionbar.set:
+    default: op
+  lengnotice.broadcast.add:
+    default: op
+  lengnotice.broadcast.remove:
+    default: op
