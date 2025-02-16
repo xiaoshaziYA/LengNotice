@@ -21,11 +21,13 @@ public class LengNoticeCommand implements CommandExecutor {
             return true;
         }
 
+        // 如果没有任何参数，直接显示帮助信息
         if (args.length == 0) {
             showHelp(sender);
             return true;
         }
 
+        // 根据第一个参数执行对应的操作
         switch (args[0].toLowerCase()) {
             case "reload":
                 if (!sender.hasPermission("lengnotice.reload")) {
@@ -116,13 +118,17 @@ public class LengNoticeCommand implements CommandExecutor {
                 }
                 return true;
             default:
+                // 如果输入的命令不存在，显示帮助信息
                 showHelp(sender);
                 return true;
         }
     }
 
+    /**
+     * 显示帮助信息
+     */
     private void showHelp(CommandSender sender) {
-        sender.sendMessage("§e/LengNotice 帮助信息:");
+        sender.sendMessage("§eLengNotice 帮助信息:");
         sender.sendMessage("§e/ln reload - 重载配置");
         sender.sendMessage("§e/ln on - 开启广播");
         sender.sendMessage("§e/ln off - 关闭广播");
@@ -130,5 +136,6 @@ public class LengNoticeCommand implements CommandExecutor {
         sender.sendMessage("§e/ln actionbar <消息> - 设置动作栏消息");
         sender.sendMessage("§e/ln add <编号> <内容> - 添加广播内容");
         sender.sendMessage("§e/ln remove <编号> - 删除广播内容");
+        sender.sendMessage("§e/ln - 显示帮助信息");
     }
 }
